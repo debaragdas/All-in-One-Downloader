@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All in One Downloader - Free YouTube, Instagram, Facebook Video & Audio</title>
+    <meta name="description" content="Your ultimate free tool to easily download videos and audio from YouTube, Instagram, and Facebook. Fast, simple, and all in one place!">
+    <meta name="keywords" content="video downloader, audio downloader, youtube downloader, instagram downloader, facebook downloader, free downloader, download youtube video, download instagram reel, download facebook video, all in one downloader">
+    <meta name="author" content="Your Name/Website Name">
+
+    <link rel="icon" href="https://raw.githubusercontent.com/github/explore/80688e429a7d4d42b9d3b2462e3160a20a1c62f0/collections/javascript/javascript.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Deep purple to bright blue */
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem; /* Increased padding */
+        }
+        h1 {
+            font-family: 'Poppins', sans-serif; /* A more impactful font for headings */
+        }
+        .btn-gradient {
+            background-image: linear-gradient(to right, #38b2ac 0%, #81e6d9 100%); /* Teal to light teal */
+            transition: all 0.3s ease-in-out;
+            background-size: 200% auto; /* For a nice hover effect */
+        }
+        .btn-gradient:hover {
+            background-position: right center; /* Moves the gradient on hover */
+            transform: translateY(-4px) scale(1.02); /* Lift and slightly enlarge */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.01); /* Lift more on hover */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); /* Deeper shadow for cards */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6">
+    <div class="bg-white p-8 md:p-14 rounded-3xl shadow-3xl max-w-5xl w-full text-center transform transition-all duration-500 hover:shadow-4xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 mb-6 leading-tight">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-blue-700">All in One Downloader</span>
+        </h1>
+        <p class="text-lg md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto">
+            Your ultimate free solution to effortlessly download videos and audio from <strong class="text-red-600">YouTube</strong>, <strong class="text-pink-600">Instagram</strong>, and <strong class="text-blue-700">Facebook</strong>, all in one convenient place.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div class="bg-gradient-to-br from-red-50 to-red-100 p-7 rounded-2xl shadow-lg transition-all duration-300 card-hover flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-red-700 mb-4 flex items-center justify-center">
+                    <svg class="w-10 h-10 mr-3 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19.615 3.184c-1.543-.306-4.07-.306-5.772-.306h-.006c-1.702 0-4.229 0-5.771.306C2.92 3.535 2 4.606 2 6.02v11.96c0 1.414.92 2.485 2.066 2.791 1.543.306 4.07.306 5.771.306h.006c1.702 0 4.229 0 5.772-.306 1.146-.306 2.066-1.377 2.066-2.791V6.02c0-1.414-.92-2.485-2.066-2.791zm-9.51 12.094V8.722l5.44 3.27-5.44 3.286z"/>
+                    </svg>
+                    YouTube
+                </h2>
+                <p class="text-gray-800 text-lg mb-6 flex-grow">Download YouTube videos and audios, including WAV format, directly from their platform.</p>
+                <button id="youtubeBtn" class="btn-gradient text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-400">
+                    Go to YouTube Downloader
+                </button>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-pink-100 p-7 rounded-2xl shadow-lg transition-all duration-300 card-hover flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-pink-700 mb-4 flex items-center justify-center">
+                    <svg class="w-10 h-10 mr-3 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.8 2c-2.4 0-4.4 2-4.4 4.4v11.2c0 2.4 2 4.4 4.4 4.4h8.4c2.4 0 4.4-2 4.4-4.4V6.4c0-2.4-2-4.4-4.4-4.4H7.8zm0 2h8.4c1.3 0 2.4 1.1 2.4 2.4v11.2c0 1.3-1.1 2.4-2.4 2.4H7.8c-1.3 0-2.4-1.1-2.4-2.4V6.4c0-1.3 1.1-2.4 2.4-2.4zm8.4 1.4a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8zM12 8c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 2c1.1 0 2 0.9 2 2s-0.9 2-2 2-2-0.9-2-2 0.9-2 2-2z"/>
+                    </svg>
+                    Instagram
+                </h2>
+                <p class="text-gray-800 text-lg mb-6 flex-grow">Download Instagram photos, videos, Reels, and IGTV videos effortlessly.</p>
+                <button id="instagramBtn" class="btn-gradient text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-400">
+                    Go to Instagram Downloader
+                </button>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-7 rounded-2xl shadow-lg transition-all duration-300 card-hover flex flex-col justify-between">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4 flex items-center justify-center">
+                    <svg class="w-10 h-10 mr-3 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.505 1.492-3.89 3.776-3.89 1.094 0 2.24.195 2.24.195v2.455H15.83c-1.222 0-1.604.752-1.604 1.53v1.816h2.766l-.443 2.89h-2.323v6.987C18.343 21.128 22 16.991 22 12z"/>
+                    </svg>
+                    Facebook
+                </h2>
+                <p class="text-gray-800 text-lg mb-6 flex-grow">Download Facebook videos from public posts quickly and easily.</p>
+                <button id="facebookBtn" class="btn-gradient text-white font-semibold py-4 px-10 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-400">
+                    Go to Facebook Downloader
+                </button>
+            </div>
+        </div>
+
+        <div class="mt-16 text-gray-600 text-base md:text-lg">
+            <p class="mb-2">
+                <strong class="text-red-600">Disclaimer:</strong> This website acts as a convenient redirector to reputable third-party services.
+            </p>
+            <p>
+                We are not responsible for the content or functionality of external websites. Please use these services responsibly and adhere to their respective terms of service.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Get references to the buttons
+        const youtubeBtn = document.getElementById('youtubeBtn');
+        const instagramBtn = document.getElementById('instagramBtn');
+        const facebookBtn = document.getElementById('facebookBtn');
+
+        // Add event listeners to each button
+        youtubeBtn.addEventListener('click', () => {
+            window.open('https://4kdownload.to/envn/youtube-wav-downloader', '_blank');
+        });
+
+        instagramBtn.addEventListener('click', () => {
+            window.open('https://indown.io/', '_blank');
+        });
+
+        facebookBtn.addEventListener('click', () => {
+            window.open('https://fdown.net/', '_blank');
+        });
+    </script>
+</body>
+</html>
